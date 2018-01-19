@@ -339,15 +339,15 @@ int CreateFiles(void *buffer, u32 size)
 	if (!buffer)
 		return (-1);
 	
-	patchUSA = fopen("sdmc:/luma/titles/000400300000BE02/usa.ips", "w+");
+	patchUSA = fopen("sdmc:/luma/titles/000400300000BE02/code.ips", "w+");
 	fwrite(buffer, 1, size, patchUSA);
 	fclose(patchUSA);
 	
-	patchEUR = fopen("sdmc:/luma/titles/000400300000BD02/eur.ips", "w+");
+	patchEUR = fopen("sdmc:/luma/titles/000400300000BD02/code.ips", "w+");
 	fwrite(buffer, 1, size, patchEUR);
 	fclose(patchEUR);
 	
-	patchJAP = fopen("sdmc:/luma/titles/000400300000BC02/jap.ips", "w+");
+	patchJAP = fopen("sdmc:/luma/titles/000400300000BC02/code.ips", "w+");
 	fwrite(buffer, 1, size, patchJAP);
 	fclose(patchJAP);
 	
@@ -364,9 +364,9 @@ int DownloadFiles(int version)
 {
 	static const char *urls[4] =
 	{
-		"https://github.com/foxverse/3ds/tree/master/web/oc-setup/usa/usa.ips?raw=true",
-		"https://github.com/foxverse/3ds/tree/master/web/oc-setup/eur/eur.ips?raw=true",
-		"https://github.com/foxverse/3ds/tree/master/web/oc-setup/jap/jap.ips?raw=true",
+		"https://github.com/foxverse/3ds/tree/master/web/oc-setup/usa/code.ips?raw=true",
+		"https://github.com/foxverse/3ds/tree/master/web/oc-setup/eur/code.ips?raw=true",
+		"https://github.com/foxverse/3ds/tree/master/web/oc-setup/jap/code.ips?raw=true",
 		"https://github.com/foxverse/3ds/tree/master/web/oc-setup/cert/cave.pem?raw=true"
 	};
 	static const char *downloadVersion[4] =
