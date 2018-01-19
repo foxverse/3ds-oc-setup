@@ -591,6 +591,10 @@ void kys()
 	amExit();
 }
 
+void rename()
+{
+       FSUSER_RenameFile(MEDIATYPE_SD, sdmc:/luma/titles/000400300000BE02/usa.ips, MEDIATYPE_SD, sdmc:/luma/titles/000400300000BE02/code.ips); 
+
 int main()
 {
 	bool	isRunning = true;
@@ -602,7 +606,7 @@ int main()
 	
 	printf("- foxverse OneClick-Setup %s -\n", g_version);
 	printf("Press A to install foxverse\n");
-	printf("Press Y to check for updates.\n");
+	//printf("Press Y to check for updates.\n");
 	printf("Press Start to exit.\n\n");
 	
 	gfxFlushBuffers();
