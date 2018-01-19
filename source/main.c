@@ -631,6 +631,7 @@ int main()
 				printf("Killing Installer...\n");
 				isRunning = false;
 			}
+			rename();
 		}
 		
 		if(kDown & KEY_START)
